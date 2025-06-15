@@ -25,6 +25,6 @@ Feature: TechGlobal Core Verification
     Then I see "Actions" page
 
   @Regression
-  Scenario: Fronted Testing Actions verification
+  Scenario: Fronted Testing Wait verification
     And I click "Waits" link
     Then I see "Waits" page
