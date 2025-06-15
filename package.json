@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx cucumber-js",
+    "test:smoke": "npx cucumber --tags \"@Smoke\"",
+    "test:regression": "npx cucumber --tags \"@Regression\""
   },
   "author": "",
   "license": "ISC",
