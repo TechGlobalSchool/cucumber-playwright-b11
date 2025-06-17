@@ -1,10 +1,17 @@
-@TGLogin
+@TGLogin @Smoke
 Feature: TechGlobal Login Verification
 
-  Scenario Outline: Validate login for <username> <password>
+  Scenario: Validate successful login
     Given I am on "https://www.techglobal-training.com/frontend/login"
-    When I enter "<username>" on login page
-    And I enter "<password>" on login page
+    When I enter username "TechGlobal" on login page
+    And I enter password "Test1234" on login page
+    And I click "LOGIN" button
+    Then I see "You are logged in" text
+
+  Scenario Outline: Validate login for username as <username> and password as <password>
+    Given I am on "https://www.techglobal-training.com/frontend/login"
+    When I enter username "<username>" on login page
+    And I enter password "<password>" on login page
     And I click "LOGIN" button
     Then I see "<error>" text
 
