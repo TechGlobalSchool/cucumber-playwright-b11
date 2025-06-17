@@ -17,3 +17,14 @@ Feature: Wikipedia App Verification
       | JavaScript |
       | Playwright |
       | Cypress    |
+
+  Scenario: Verify top 10 languages are displayed
+    Then I see following languages in order:
+      | English | 日本語 | Русский | Deutsch | Español | Français | 中文 | Italiano | Português | فارسی |
+
+
+  Scenario: Verify table below
+    Then I verify below table
+      | 1 | iPhone  | 1,000 | 1,000 |
+      | 3 | Airpods | 100   | 300   |
+      | 2 | iPad    | 500   | 1,000 |
