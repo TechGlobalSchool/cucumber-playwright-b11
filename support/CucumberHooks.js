@@ -33,5 +33,5 @@ After(async function() {
 });
 
 AfterAll(async function() {
-  await this.browser?.close();
+  await global.browser?.close();
 });
