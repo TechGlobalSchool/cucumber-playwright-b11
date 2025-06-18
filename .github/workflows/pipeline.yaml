@@ -26,7 +26,7 @@ jobs:
     - name: Run Cucumber Tests
       run: npx cucumber-js
     - uses: actions/upload-artifact@v4
-      if: ${{ !cancelled() }}
+      if: always()
       with:
         name: Reports
         path: reports/
